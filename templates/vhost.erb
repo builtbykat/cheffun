@@ -1,0 +1,11 @@
+<VirtualHost *:80>
+    ServerAdmin kat@localhost
+	
+    DocumentRoot <%= @doc_root %>
+
+    <Directory <%= @doc_root %>>
+		DirectoryIndex index.php
+		AllowOverride All
+        Require all granted
+    </Directory>
+</VirtualHost>
