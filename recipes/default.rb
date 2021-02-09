@@ -18,9 +18,6 @@ service 'apache2' do
 	action [ :enable, :start ]
 end
 
-# attribute definition to specify our doc_root
-node.default['sandbox']['doc_root'] = '/var/www/sandbox' # i believe this is a global var rather than a local one
-
 # create our doc_root
 directory node['sandbox']['doc_root'] do
 	action :create
